@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Function Parameters</title>
+  <style>
+    * {
+      margin: 0;
+      padding:0;
+    }
+    .box {
+      width: 200px;
+      height: 50px;
+      margin-left: 140px;
+      background-color: rgb(41, 41, 41);
+      float: left
+    }
+
+    .tombol {
+      width: 100px;
+      height: 25px;
+      padding: 6px 9px;
+      border: 1px solid grey;
+      background-color: aquamarine;
+      margin: 10px 0px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  
+  <div id="btn_red" class="tombol" onclick="bukabox('RED', 'Stiven Hermawan')">PROFILE</div>
+  <div id="btn_blue" class="tombol" onclick="bukabox('BLUE', 'Product Design UPH 2020')">EDUCATION</div>
+  <div id="btn_GREEN" class="tombol" onclick="bukabox('GREEN', 'FURNITURE DESIGN')">INTEREST</div>
+  <div id="pop" class="box"></div>
+</body>
+</html>
+<script>
+  function bukabox(x, y) {
+    // var box = document.querySelector('#pop');
+    // box.style.display = "block";
+
+    document.querySelector('#pop').style.display = "block";
+    document.querySelector('#pop').style.backgroundColor = x;
+    document.querySelector('#pop').innerHTML = y;
+    if (x == 'yellow') {
+      document.querySelector('#btn_yellow').style.backgroundColor = 'grey';
+      document.querySelector('#btn_pink').style.backgroundColor = 'white';
+      document.querySelector('#btn_blue').style.backgroundColor = 'white';
+    } else if (x == 'pink') {
+      document.querySelector('#btn_yellow').style.backgroundColor = 'white';
+      document.querySelector('#btn_pink').style.backgroundColor = 'grey';
+      document.querySelector('#btn_blue').style.backgroundColor = 'white';
+    } else {
+      document.querySelector('#btn_yellow').style.backgroundColor = 'white';
+      document.querySelector('#btn_pink').style.backgroundColor = 'white';
+      document.querySelector('#btn_blue').style.backgroundColor = 'grey';
+    }
+  }
+</script>
